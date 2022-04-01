@@ -6,12 +6,14 @@ import { FaceSnapComponent } from './face-snap/face-snap.component';
 import { registerLocaleData } from '@angular/common';
 import * as en from '@angular/common/locales/en';
 import { NumbersComponent } from './numbers/numbers.component';
+import { FaceSnapListComponent } from './face-snap-list/face-snap-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FaceSnapComponent,
-    NumbersComponent
+    NumbersComponent,
+    FaceSnapListComponent
   ],
   imports: [
     BrowserModule
