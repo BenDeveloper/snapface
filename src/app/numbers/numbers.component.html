@@ -1,0 +1,47 @@
+<div class="numbers-card">
+    <div class="numbers-inside-card">
+        <h2>DecimalPipe</h2>
+
+        <p>No formatting :</p>
+        <b>{{ 4346234.36 }}</b>
+
+        <p>Classic formatting :</p>
+        <b>{{ 4346234.36 | number }}</b>
+
+        <p>Rounding to the closest integer and 0 numbers after comma</p>
+        <b>{{ 4346234.36 | number: '1.0-0' }}</b>
+
+        <p>Rounding to the closest integer and 1 numbers after comma</p>
+        <b>{{ 4346234.36 | number: '1.0-1' }}</b>
+        
+        <p>Rounding to the closest integer and 3 numbers after comma</p>
+        <b>{{ 4346234.3333333333 | number: '1.0-3' }}</b>
+    </div>
+
+    <div class="numbers-inside-card">
+        <h2>PercentPipe </h2>
+
+        <p>Classic</p>
+        <b>{{ 0.336 | percent }}</b>
+        
+        <p>Default</p>
+        <b>{{ 0.336 | percent: '1.0-1' }}</b>
+
+
+    </div>
+
+    <div class="numbers-inside-card">
+        <h2>CurrencyPipe </h2>
+
+        <p>Classic</p>
+        <b>{{ 344.36 | currency }}</b>
+        
+        <p>Select currency</p>
+        <b>{{ 344.36 | currency: 'EUR' }} | </b>
+        <b>{{ 344.36 | currency: 'GBP' }} | </b>
+        <b>{{ 344.36 | currency: 'USD' }} </b>
+        
+        <p>Show currency code</p>
+        <b>{{ 344.36 | currency: 'EUR' : 'code' }}</b>
+    </div>
+</div>
