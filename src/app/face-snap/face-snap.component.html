@@ -1,9 +1,5 @@
-<div class="face-snap-card" [ngClass]="{snapped : labelButtonSnap !== 'Oh snap!'}">
-    <h2>{{ faceSnap.title | titlecase }}</h2>
-    <p>Created : {{ faceSnap.createdDate | date :  'HH:mm:ss dd/MM/YYYY' }}</p>
-    <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
-    <p>{{ faceSnap.description | lowercase }}</p>
-    <p *ngIf="faceSnap.location">Photo tacken at {{ faceSnap.location | uppercase }}</p>
-    <button (click)="onClickSnap()">{{ labelButtonSnap }}</button>
-    <span [ngStyle]="{ color: 'rgb(0, ' + faceSnap.snaps + ', 0)' }">👍 {{ faceSnap.snaps }}</span>
-</div>
+<div class="face-snap-card" [ngClass]="{ snapped: labelButtonSnap === 'Oops, unSnap!' }">
+    <h2>{{ faceSnap.title | uppercase }}</h2>
+    <p>{{ faceSnap.description }}</p>
+    <button (click)="onViewFaceSnap()">VIEW</button>
+  </div>
